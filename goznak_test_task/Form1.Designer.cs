@@ -79,6 +79,7 @@
             this.uploadButton.TabIndex = 0;
             this.uploadButton.Text = "Выгрузить данные";
             this.uploadButton.UseVisualStyleBackColor = true;
+            this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
             // 
             // verticalSplitter
             // 

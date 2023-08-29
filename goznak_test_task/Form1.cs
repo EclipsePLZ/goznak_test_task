@@ -1,8 +1,13 @@
 using goznak_test_task.Models;
+using goznak_test_task.Work_With_Files;
+using goznak_test_task.Work_With_Files.Interfaces;
 using System.ComponentModel;
 
 namespace goznak_test_task {
     public partial class MainForm : Form {
+
+        IFileService fileService = new ExcelFileService();
+        IDialogService dialogService = new DefaultDialogService();
 
         private BindingList<Users> usersList;
         private BindingList<Organizations> organizationsList;
@@ -10,10 +15,25 @@ namespace goznak_test_task {
         private BindingList<Cities> citiesList;
 
         public MainForm() {
+
             InitializeComponent();
 
             GenerateData();
             FillDataGridColumns();
+        }
+
+        private void uploadButton_Click(object sender, EventArgs e) {
+            try {
+                if (dialogService.SaveFolderDialog()) {
+                    fileService.Save(dialogService.FolderPath + "\\users.xls", dataGridUser);
+                    fileService.Save(dialogService.FolderPath + "\\cities.xls", dataGridCity);
+                    fileService.Save(dialogService.FolderPath + "\\professions.xls", dataGridProfession);
+                    fileService.Save(dialogService.FolderPath + "\\organizations.xls", dataGridOrganization);
+                }
+            }
+            catch (Exception ex) {
+                dialogService.ShowMessage(ex.Message);
+            }
         }
 
         /// <summary>
