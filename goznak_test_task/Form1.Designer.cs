@@ -28,11 +28,11 @@
             this.uploadButton = new System.Windows.Forms.Button();
             this.verticalSplitter = new System.Windows.Forms.SplitContainer();
             this.leftContainer = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridUser = new System.Windows.Forms.DataGridView();
+            this.dataGridCity = new System.Windows.Forms.DataGridView();
             this.rightContainer = new System.Windows.Forms.SplitContainer();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridProfession = new System.Windows.Forms.DataGridView();
+            this.dataGridOrganization = new System.Windows.Forms.DataGridView();
             this.mainLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verticalSplitter)).BeginInit();
             this.verticalSplitter.Panel1.SuspendLayout();
@@ -42,14 +42,14 @@
             this.leftContainer.Panel1.SuspendLayout();
             this.leftContainer.Panel2.SuspendLayout();
             this.leftContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightContainer)).BeginInit();
             this.rightContainer.Panel1.SuspendLayout();
             this.rightContainer.Panel2.SuspendLayout();
             this.rightContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProfession)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOrganization)).BeginInit();
             this.SuspendLayout();
             // 
             // mainLayoutPanel
@@ -62,19 +62,20 @@
             this.mainLayoutPanel.Controls.Add(this.verticalSplitter, 1, 0);
             this.mainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
             this.mainLayoutPanel.RowCount = 1;
             this.mainLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainLayoutPanel.Size = new System.Drawing.Size(800, 450);
+            this.mainLayoutPanel.Size = new System.Drawing.Size(700, 338);
             this.mainLayoutPanel.TabIndex = 0;
             // 
             // uploadButton
             // 
             this.uploadButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.uploadButton.Location = new System.Drawing.Point(20, 40);
-            this.uploadButton.Margin = new System.Windows.Forms.Padding(20, 40, 20, 3);
+            this.uploadButton.Location = new System.Drawing.Point(18, 30);
+            this.uploadButton.Margin = new System.Windows.Forms.Padding(18, 30, 18, 2);
             this.uploadButton.Name = "uploadButton";
-            this.uploadButton.Size = new System.Drawing.Size(135, 57);
+            this.uploadButton.Size = new System.Drawing.Size(118, 43);
             this.uploadButton.TabIndex = 0;
             this.uploadButton.Text = "Выгрузить данные";
             this.uploadButton.UseVisualStyleBackColor = true;
@@ -82,7 +83,8 @@
             // verticalSplitter
             // 
             this.verticalSplitter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.verticalSplitter.Location = new System.Drawing.Point(178, 3);
+            this.verticalSplitter.Location = new System.Drawing.Point(157, 2);
+            this.verticalSplitter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.verticalSplitter.Name = "verticalSplitter";
             // 
             // verticalSplitter.Panel1
@@ -92,97 +94,106 @@
             // verticalSplitter.Panel2
             // 
             this.verticalSplitter.Panel2.Controls.Add(this.rightContainer);
-            this.verticalSplitter.Size = new System.Drawing.Size(619, 444);
-            this.verticalSplitter.SplitterDistance = 307;
+            this.verticalSplitter.Size = new System.Drawing.Size(540, 334);
+            this.verticalSplitter.SplitterDistance = 267;
             this.verticalSplitter.TabIndex = 1;
             // 
             // leftContainer
             // 
             this.leftContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftContainer.Location = new System.Drawing.Point(0, 0);
+            this.leftContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leftContainer.Name = "leftContainer";
             this.leftContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // leftContainer.Panel1
             // 
-            this.leftContainer.Panel1.Controls.Add(this.dataGridView1);
+            this.leftContainer.Panel1.Controls.Add(this.dataGridUser);
             // 
             // leftContainer.Panel2
             // 
-            this.leftContainer.Panel2.Controls.Add(this.dataGridView3);
-            this.leftContainer.Size = new System.Drawing.Size(307, 444);
-            this.leftContainer.SplitterDistance = 220;
+            this.leftContainer.Panel2.Controls.Add(this.dataGridCity);
+            this.leftContainer.Size = new System.Drawing.Size(267, 334);
+            this.leftContainer.SplitterDistance = 165;
+            this.leftContainer.SplitterWidth = 3;
             this.leftContainer.TabIndex = 0;
             // 
-            // dataGridView1
+            // dataGridUser
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(307, 220);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridUser.Location = new System.Drawing.Point(0, 0);
+            this.dataGridUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridUser.Name = "dataGridUser";
+            this.dataGridUser.RowHeadersWidth = 51;
+            this.dataGridUser.RowTemplate.Height = 29;
+            this.dataGridUser.Size = new System.Drawing.Size(267, 165);
+            this.dataGridUser.TabIndex = 0;
             // 
-            // dataGridView3
+            // dataGridCity
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 29;
-            this.dataGridView3.Size = new System.Drawing.Size(307, 220);
-            this.dataGridView3.TabIndex = 0;
+            this.dataGridCity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridCity.Location = new System.Drawing.Point(0, 0);
+            this.dataGridCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridCity.Name = "dataGridCity";
+            this.dataGridCity.RowHeadersWidth = 51;
+            this.dataGridCity.RowTemplate.Height = 29;
+            this.dataGridCity.Size = new System.Drawing.Size(267, 166);
+            this.dataGridCity.TabIndex = 0;
             // 
             // rightContainer
             // 
             this.rightContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightContainer.Location = new System.Drawing.Point(0, 0);
+            this.rightContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rightContainer.Name = "rightContainer";
             this.rightContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // rightContainer.Panel1
             // 
-            this.rightContainer.Panel1.Controls.Add(this.dataGridView2);
+            this.rightContainer.Panel1.Controls.Add(this.dataGridProfession);
             // 
             // rightContainer.Panel2
             // 
-            this.rightContainer.Panel2.Controls.Add(this.dataGridView4);
-            this.rightContainer.Size = new System.Drawing.Size(308, 444);
-            this.rightContainer.SplitterDistance = 220;
+            this.rightContainer.Panel2.Controls.Add(this.dataGridOrganization);
+            this.rightContainer.Size = new System.Drawing.Size(269, 334);
+            this.rightContainer.SplitterDistance = 165;
+            this.rightContainer.SplitterWidth = 3;
             this.rightContainer.TabIndex = 0;
             // 
-            // dataGridView2
+            // dataGridProfession
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(308, 220);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridProfession.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProfession.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridProfession.Location = new System.Drawing.Point(0, 0);
+            this.dataGridProfession.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridProfession.Name = "dataGridProfession";
+            this.dataGridProfession.RowHeadersWidth = 51;
+            this.dataGridProfession.RowTemplate.Height = 29;
+            this.dataGridProfession.Size = new System.Drawing.Size(269, 165);
+            this.dataGridProfession.TabIndex = 0;
             // 
-            // dataGridView4
+            // dataGridOrganization
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 29;
-            this.dataGridView4.Size = new System.Drawing.Size(308, 220);
-            this.dataGridView4.TabIndex = 0;
+            this.dataGridOrganization.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOrganization.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridOrganization.Location = new System.Drawing.Point(0, 0);
+            this.dataGridOrganization.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridOrganization.Name = "dataGridOrganization";
+            this.dataGridOrganization.RowHeadersWidth = 51;
+            this.dataGridOrganization.RowTemplate.Height = 29;
+            this.dataGridOrganization.Size = new System.Drawing.Size(269, 166);
+            this.dataGridOrganization.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.mainLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "ГОЗНАК";
             this.mainLayoutPanel.ResumeLayout(false);
@@ -194,14 +205,14 @@
             this.leftContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leftContainer)).EndInit();
             this.leftContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCity)).EndInit();
             this.rightContainer.Panel1.ResumeLayout(false);
             this.rightContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rightContainer)).EndInit();
             this.rightContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProfession)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOrganization)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,10 +224,10 @@
         private Button uploadButton;
         private SplitContainer verticalSplitter;
         private SplitContainer leftContainer;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView3;
+        private DataGridView dataGridUser;
+        private DataGridView dataGridCity;
         private SplitContainer rightContainer;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView4;
+        private DataGridView dataGridProfession;
+        private DataGridView dataGridOrganization;
     }
 }
